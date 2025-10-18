@@ -115,5 +115,11 @@
       user   = "mitchellh";
       darwin = true;
     };
+    
+    darwinConfigurations.macbook-air-m3 = mkSystem "macbook-air-m3" {
+    system = "aarch64-darwin";
+    user = "zeeqeeng";
+    darwin = true;
+    };
   };
 }
