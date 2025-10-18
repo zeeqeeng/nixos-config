@@ -75,12 +75,15 @@ in {
 
     pkgs.gopls
     pkgs.zigpkgs."0.14.0"
+    
+    pkgs.rustup 
 
     pkgs.claude-code
     pkgs.codex
 
     # Node is required for Copilot.vim
     pkgs.nodejs
+
   ] ++ (lib.optionals isDarwin [
     # This is automatically setup on Linux
     pkgs.cachix
@@ -271,7 +274,7 @@ in {
     enable = true;
   };
 
-  services.gpg-agent = {
+    services.gpg-agent = {
     enable = isLinux;
     pinentry.package = pkgs.pinentry-tty;
 
