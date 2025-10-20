@@ -74,10 +74,9 @@ in {
     pkgs.watch
 
     pkgs.gopls
-    pkgs.zigpkgs."0.15.2"
-    pkgs.zls
+   
     
-    pkgs.rustup 
+    
 
     pkgs.claude-code
     pkgs.codex
@@ -184,8 +183,8 @@ in {
 
   programs.git = {
     enable = true;
-    userName = "Mitchell Hashimoto";
-    userEmail = "m@mitchellh.com";
+    userName = "Zeeqeen Guo";
+    userEmail = "zeeqeen@proton.me";
     signing = {
       key = "523D5DC389D273BC";
       signByDefault = true;
@@ -200,18 +199,11 @@ in {
       color.ui = true;
       core.askPass = ""; # needs to be empty to use terminal for ask pass
       credential.helper = "store"; # want to make this more secure
-      github.user = "mitchellh";
+      github.user = "zeeqeeng";
       push.default = "tracking";
       init.defaultBranch = "main";
     };
   };
-
-  programs.go = {
-    enable = true;
-    goPath = "code/go";
-    goPrivate = [ "github.com/mitchellh" "github.com/hashicorp" "rfc822.mx" ];
-  };
-
   programs.jujutsu = {
     enable = true;
 
@@ -271,6 +263,7 @@ in {
     enable = true;
   };
 
+ 
   programs.oh-my-posh = {
     enable = true;
   };
